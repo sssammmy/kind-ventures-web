@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { Map } from 'lucide-react';
 
 const MapComponent = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
@@ -27,17 +28,23 @@ const MapComponent = () => {
     });
 
     // Add marker for the location
-    const marker = new mapboxgl.Marker({ color: '#5DA9DF' })
+    const marker = new mapboxgl.Marker({ color: '#1D3557' })
       .setLngLat([longitude, latitude])
       .setPopup(
         new mapboxgl.Popup({ offset: 25 }).setHTML(
-          '<h3 class="font-medium text-gray-800">Kind Ventures</h3><p class="text-gray-600">Newport Center Drive, Newport Beach, CA 92660</p>'
+          '<div class="p-2"><h3 class="font-semibold text-kind-navy text-lg">Kind Ventures</h3><p class="text-gray-600">Newport Center Drive, Newport Beach, CA 92660</p></div>'
         )
       )
       .addTo(map.current);
     
+    // Open popup by default
+    marker.togglePopup();
+    
     // Add navigation controls
     map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
+    
+    // Add fullscreen control
+    map.current.addControl(new mapboxgl.FullscreenControl(), 'top-right');
     
     // Cleanup
     return () => {
@@ -54,9 +61,12 @@ const MapComponent = () => {
   };
 
   return (
-    <div className="w-full h-96 bg-gray-100 rounded-lg overflow-hidden">
+    <div className="w-full h-[350px] bg-gray-100 rounded-lg overflow-hidden">
       {showTokenInput ? (
         <div className="flex flex-col items-center justify-center h-full p-6 text-center">
+          <div className="mb-4 text-kind-blue">
+            <Map size={40} />
+          </div>
           <h3 className="text-xl font-semibold text-kind-navy mb-4">Enter Your Mapbox Token</h3>
           <p className="text-gray-600 mb-6 max-w-md">
             Please enter your Mapbox public token to view the map. You can get one by signing up at{' '}

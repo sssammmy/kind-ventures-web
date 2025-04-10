@@ -7,6 +7,14 @@ const ContactSection = () => {
     <section id="contact" className="section-padding blue-gradient text-white">
       <div className="container-custom">
         <div className="text-center">
+          {/* Added logo at the top of the section */}
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/664338e2-3887-4da3-b207-e98bf9492182.png" 
+              alt="Kind Ventures Logo" 
+              className="h-20 md:h-24 object-contain"
+            />
+          </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Get in Touch</h2>
           <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto">
             Interested in discussing potential acquisition opportunities or learning more about Kind Ventures? We'd love to hear from you.
@@ -56,8 +64,8 @@ const ContactSection = () => {
           </div>
           
           <div className="reveal">
-            <div className="bg-white rounded-lg p-2 shadow-lg overflow-hidden">
-              <h3 className="text-2xl font-bold text-kind-navy p-4">Our Location</h3>
+            <div className="bg-white rounded-lg p-4 shadow-lg overflow-hidden">
+              <h3 className="text-2xl font-bold text-kind-navy mb-3">Our Location</h3>
               <MapComponent />
             </div>
           </div>
