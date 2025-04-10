@@ -1,6 +1,5 @@
 
 import { Mail, Phone, MapPin } from 'lucide-react';
-import MapComponent from './MapComponent';
 
 const ContactSection = () => {
   return (
@@ -21,7 +20,7 @@ const ContactSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
+        <div className="max-w-2xl mx-auto mt-10">
           <div className="reveal">
             <div className="space-y-8">
               <div className="flex items-start">
@@ -60,13 +59,6 @@ const ContactSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-          
-          <div className="reveal">
-            <div className="bg-white rounded-lg p-4 shadow-lg overflow-hidden">
-              <h3 className="text-2xl font-bold text-kind-navy mb-3">Our Location</h3>
-              <MapComponent />
             </div>
           </div>
         </div>
