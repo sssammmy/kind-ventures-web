@@ -46,8 +46,8 @@ const Navbar = () => {
     >
       <div className="container-custom">
         <div className="flex justify-between items-center">
-          <a href="/" className="flex items-center gap-2">
-            <img src="/lovable-uploads/664338e2-3887-4da3-b207-e98bf9492182.png" alt="Kind Ventures Logo" className="h-10 md:h-12" />
+          <a href="/" className="flex items-center gap-3">
+            <img src="/lovable-uploads/664338e2-3887-4da3-b207-e98bf9492182.png" alt="Kind Ventures Logo" className="h-16 md:h-20" />
             <span className={`font-montserrat font-bold text-xl md:text-2xl ${scrolled ? 'text-kind-navy' : 'text-kind-navy'}`}>
               Kind Ventures
             </span>

@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="flex flex-col max-w-5xl">
           <div className="animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-kind-navy mb-6">
-              Transforming Businesses Through <span className="text-kind-blue">Kind Acquisition</span>
+              Transforming Businesses Through <span className="text-kind-blue">One of a Kind Acquisition Playbook</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl">
               We acquire long-standing profitable B2B service businesses and scale them with technology and experience.
